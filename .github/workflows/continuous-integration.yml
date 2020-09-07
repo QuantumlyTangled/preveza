@@ -47,10 +47,6 @@ jobs:
       - name: Install Dependencies
         run: yarn --frozen-lockfile
       - name: Copy Configuration
-        run: |
-          pushd src &&
-          cp config.example.ts config.ts &&
-          popd
       - name: Run tests
         run: yarn test --coverage
       - name: Store code coverage report
@@ -78,10 +74,7 @@ jobs:
       - name: Install Dependencies
         run: yarn --ignore-scripts --frozen-lockfile
       - name: Copy Configuration
-        run: |
-          pushd src &&
-          cp config.example.ts config.ts &&
-          popd
+
       - name: Compile TypeScript
         uses: icrawl/action-tsc@v1
         with:
