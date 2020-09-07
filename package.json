@@ -1,13 +1,13 @@
 {
   "name": "olympus-nest",
   "version": "0.0.1",
-  "description": "",
+  "description": "Backend for docks",
   "author": "Docks Exchange Project",
   "maintainers": [
     "Charalampos Fanoulis <yo@fanoulis.dev>"
   ],
   "private": true,
-  "license": "UNLICENSED",
+  "license": "AGPL-v3",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -74,6 +74,7 @@
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+	"testEnvironment": "node",
+	"testRunner": "jest-circus/runner"
   }
 }
