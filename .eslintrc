@@ -1,0 +1,7 @@
+{
+	"extends": ["@skyra", "plugin:prettier/recommended"],
+	"rules": {
+		"@typescript-eslint/indent": 0,
+		"@typescript-eslint/no-extraneous-class": 0
+	}
+}

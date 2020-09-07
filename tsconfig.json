@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"declaration": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"outDir": "./dist",
+		"baseUrl": "./",
+		"alwaysStrict": true,
+		"incremental": true,
+		"lib": ["esnext"],
+		"moduleResolution": "node",
+		"noUnusedLocals": true,
+		"pretty": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "esnext"
+	}
+}
