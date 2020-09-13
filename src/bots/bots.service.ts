@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { deepClone } from '../lib/util/Util';
+import { deepClone } from '@sapphire/utilities';
 
 @Injectable()
 export class BotsService {
