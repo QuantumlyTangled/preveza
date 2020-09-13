@@ -18,9 +18,6 @@ export class Coin {
 	@Column({ default: true })
 	public isActive!: boolean;
 
-	@ManyToOne(
-		() => BotUser,
-		user => user.coins
-	)
+	@ManyToOne(() => BotUser, (user) => user.coins)
 	public managedBy!: BotUser;
 }

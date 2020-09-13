@@ -16,15 +16,9 @@ export class BotUser {
 	@Column({ default: true })
 	public isActive!: boolean;
 
-	@OneToMany(
-		() => Coin,
-		coin => coin.managedBy
-	)
+	@OneToMany(() => Coin, (coin) => coin.managedBy)
 	public coins!: Coin[];
 
-	@ManyToMany(
-		() => HumanUser,
-		human => human.botsManaged
-	)
+	@ManyToMany(() => HumanUser, (human) => human.botsManaged)
 	public managers!: HumanUser[];
 }

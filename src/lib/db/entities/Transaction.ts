@@ -7,10 +7,7 @@ export class Transaction {
 	@Column()
 	public id!: string;
 
-	@ManyToOne(
-		() => HumanUser,
-		human => human.transactions
-	)
+	@ManyToOne(() => HumanUser, (human) => human.transactions)
 	public user!: HumanUser[];
 
 	@Column()

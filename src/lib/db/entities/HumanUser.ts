@@ -16,9 +16,6 @@ export class HumanUser {
 	@ManyToMany(() => BotUser)
 	public botsManaged!: BotUser[];
 
-	@OneToMany(
-		() => Transaction,
-		tx => tx.user
-	)
+	@OneToMany(() => Transaction, (tx) => tx.user)
 	public transactions!: Transaction[];
 }
