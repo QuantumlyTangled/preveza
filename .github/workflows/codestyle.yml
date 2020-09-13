@@ -29,9 +29,8 @@ jobs:
       - name: Run ESLint
         uses: icrawl/action-eslint@v1
 
-jobs:
-  Linting:
-      name: ESLint linting
+  Prettier:
+      name: Prettier formattings
       runs-on: ubuntu-latest
       if: "!contains(github.event.head_commit.message, '[skip ci]')"
       steps:

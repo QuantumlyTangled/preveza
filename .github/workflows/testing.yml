@@ -32,7 +32,7 @@ jobs:
   Testing:
     name: Unit Testing
     runs-on: ubuntu-latest
-    requires: [Building]
+    needs: [Building]
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout Project
@@ -60,7 +60,7 @@ jobs:
   Testing_E2E:
     name: End-to-end testing
     runs-on: ubuntu-latest
-    requires: [Building, Testing]
+    needs: [Building, Testing]
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout Project
