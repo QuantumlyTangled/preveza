@@ -1,0 +1,53 @@
+name: Code formatting
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  Linting:
+    name: ESLint linting
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 14
+          check-latest: true
+      - name: Restore CI Cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-14-${{ hashFiles('**/yarn.lock') }}
+      - name: Install Dependencies
+        run: yarn --ignore-scripts --frozen-lockfile
+      - name: Run ESLint
+        uses: icrawl/action-eslint@v1
+
+jobs:
+  Linting:
+      name: ESLint linting
+      runs-on: ubuntu-latest
+      if: "!contains(github.event.head_commit.message, '[skip ci]')"
+      steps:
+        - name: Checkout Project
+          uses: actions/checkout@v2
+        - name: Use Node.js 14
+          uses: actions/setup-node@v2-beta
+          with:
+            node-version: 14
+            check-latest: true
+        - name: Restore CI Cache
+          uses: actions/cache@v1
+          with:
+            path: node_modules
+            key: ${{ runner.os }}-14-${{ hashFiles('**/yarn.lock') }}
+        - name: Install Dependencies
+          run: yarn --ignore-scripts --frozen-lockfile
+        - name: Run Pretiier
+          run: yarn format:test
