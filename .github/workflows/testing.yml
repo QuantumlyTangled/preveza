@@ -26,8 +26,6 @@ jobs:
         run: yarn --ignore-scripts --frozen-lockfile
       - name: Compile TypeScript
         uses: icrawl/action-tsc@v1
-        with:
-          build: src
 
   Testing:
     name: Unit Testing
