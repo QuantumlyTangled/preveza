@@ -17,4 +17,10 @@ describe('BotsController', () => {
 	it('should be defined', () => {
 		expect(controller).toBeDefined();
 	});
+
+	it('should return the sample bot', () => {
+		// eslint-disable-next-line @typescript-eslint/unbound-method
+		expect(controller.getBot).toBeDefined();
+		expect(controller.getBot('0001')).toStrictEqual({ id: '0001', name: 'whatever' });
+	});
 });
