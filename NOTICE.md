@@ -1,4 +1,4 @@
-        Olympus: Backend service for Docks, The Discord Currency Exchange 
+        preveza: Backend service for Docks, The Discord Currency Exchange 
         Copyright (C) 2020 Charalampos Fanoulis
 
         This program is free software: you can redistribute it and/or modify
