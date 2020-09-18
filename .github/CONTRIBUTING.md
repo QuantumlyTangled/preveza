@@ -15,5 +15,6 @@ in your text editor or IDE of your choice to ensure builds from GitHub Actions d
 
 <!-- Link Dump -->
 
+[Discord Server]: https://discord.gg/cXhUdEp
 [here]: https://github.com/docks-exchange/preveza/pulls
 [eslint]: https://eslint.org/
